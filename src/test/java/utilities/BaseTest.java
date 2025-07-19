@@ -7,14 +7,16 @@ import org.testng.asserts.SoftAssert;
 public class BaseTest {
 
     protected SoftAssert softAssert;
+    protected final String regression = "regression";
+    protected final String smoke = "smoke";
 
-@BeforeMethod
+@BeforeMethod(alwaysRun = true)
 public void masterSetup(){
     Logs.info("Setup del padre");
     softAssert = new SoftAssert();
 
 }
-@AfterMethod
+@AfterMethod(alwaysRun = true)
 public void masterTearDown(){
     Logs.info("TearDown del padre");
 }

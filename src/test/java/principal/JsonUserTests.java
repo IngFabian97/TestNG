@@ -13,29 +13,29 @@ import utilities.BaseTest;
 public class JsonUserTests extends BaseTest {
     private User user;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setUp() {
         user = JsonReader.leerUsuarioJson();
     }
 
-    @Test
+    @Test (groups = {"regression", "smoke"})
     public void primerTest() {
         Assert.assertTrue(user.getId() > 0);
 
     }
     
-    @Test
+    @Test(groups = {"regression", "smoke"})   
     public void segundoTest() {
         Assert.assertEquals(user.getAddress().getGeo().getLng(), 71.7478);
     }
 
-    @Test
+    @Test(groups = {"regression"})
     public void tercerTest() {
         System.out.println("El company.bs es: " + user.getCompany().getBs());
         Assert.assertTrue(user.getCompany().getBs().length() > 10);
     }
 
-    @Test
+    @Test(groups = {"regression"})
     public void cuartoTest() {
         softAssert.assertEquals(user.getName(),"Mrs. Dennis Schulist", "El nombre del usuario no es el esperado");
         softAssert.assertEquals(user.getId(),6, "El ID del usuario no es el esperado");
@@ -45,7 +45,7 @@ public class JsonUserTests extends BaseTest {
 
         }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void tearDown() {
         
     }

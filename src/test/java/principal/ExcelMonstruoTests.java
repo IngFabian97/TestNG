@@ -16,30 +16,30 @@ public class ExcelMonstruoTests extends BaseTest{
 
     private List<Monstruo> monstruos;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setUp() {
         monstruos = ExcelReader.obtenerListaMonstruos();
     }
 
-    @Test
+    @Test(groups = {"regression", "smoke"})
     public void primerTest(){
         final var primerMonstruo = monstruos.get(0);
         Assert.assertEquals(primerMonstruo.getNombre(), "TOLOSA", "El nombre del primer monstruo no es el esperado");
     }
 
-    @Test
+    @Test(groups = {"regression", "smoke"})
     public void segundoTest(){
         final var n = monstruos.size();
         Assert.assertEquals(n, 14, "El número de monstruos no es el esperado");
     }
 
-    @Test
+    @Test (groups = {"regression"})
     public void tercerTest(){
         final var tercerMonstruo = monstruos.get(2);
         Assert.assertEquals(tercerMonstruo.getNivel(),"22", "El nivel del tercer monstruo no es el esperado");
     }
 
-    @Test
+    @Test(groups = {"regression"})
     public void cuartoTest(){
          final var ultimoMonstruo = monstruos.get(monstruos.size() - 1);
 
@@ -53,7 +53,7 @@ public class ExcelMonstruoTests extends BaseTest{
         
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void tearDown() {
         
     }
