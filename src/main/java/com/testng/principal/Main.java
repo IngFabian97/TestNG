@@ -1,4 +1,4 @@
-package com.testng;
+package com.testng.principal;
 
 public class Main {
     public static void main(String[] args) {

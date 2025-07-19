@@ -1,8 +1,6 @@
 package com.testng.modelos;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.github.javafaker.Address;
-import com.github.javafaker.Company;
 
 public class User {
     @JsonProperty("id")
