@@ -35,6 +35,16 @@ public class JsonUserTests extends BaseTest {
         Assert.assertTrue(user.getCompany().getBs().length() > 10);
     }
 
+    @Test
+    public void cuartoTest() {
+        softAssert.assertEquals(user.getName(),"Mrs. Dennis Schulist", "El nombre del usuario no es el esperado");
+        softAssert.assertEquals(user.getId(),6, "El ID del usuario no es el esperado");
+        softAssert.assertEquals(user.getUsername(),"Leopoldo_Corkery", "El username del usuario no es el esperado");
+        softAssert.assertEquals(user.getEmail(),"Karley_Dach@jasper.info", "El email del usuario no es el esperado");
+        softAssert.assertAll();
+
+        }
+
     @AfterMethod
     public void tearDown() {
         
