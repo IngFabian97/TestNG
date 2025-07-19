@@ -39,6 +39,20 @@ public class ExcelMonstruoTests extends BaseTest{
         Assert.assertEquals(tercerMonstruo.getNivel(),"22", "El nivel del tercer monstruo no es el esperado");
     }
 
+    @Test
+    public void cuartoTest(){
+         final var ultimoMonstruo = monstruos.get(monstruos.size() - 1);
+
+        softAssert.assertEquals(ultimoMonstruo.getNombre(), "LUCENA", "El nombre del último monstruo no es el esperado");
+        softAssert.assertEquals(ultimoMonstruo.getEdad(), 3, "La edad del último monstruo no es la esperada");
+        softAssert.assertEquals(ultimoMonstruo.getPeso(), 8.57, "El peso del último monstruo no es el esperado");
+        softAssert.assertEquals(ultimoMonstruo.getGenero(), "MACHO", "El género del último monstruo no es el esperado");
+        softAssert.assertEquals(ultimoMonstruo.getTipo(), "PLANTA", "El tipo del último monstruo no es el esperado");
+        softAssert.assertEquals(ultimoMonstruo.getNivel(), 36, "El nivel del último monstruo no es el esperado");
+        softAssert.assertAll();
+        
+    }
+
     @AfterMethod
     public void tearDown() {
         

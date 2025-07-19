@@ -8,23 +8,23 @@ public class Monstruo {
     @ExcelCellName("NOMBRE")
     private String nombre;
     @ExcelCellName("EDAD")
-    private String edad;
+    private int edad;
     @ExcelCellName("PESO")
-    private String peso;
+    private double peso;
     @ExcelCellName("GENERO")
     private String genero;
     @ExcelCellName("TIPO")
     private String tipo;
     @ExcelCellName("NIVEL")
-    private String nivel;
+    private int nivel;
     
     public String getNombre() {
         return nombre;
     }
-    public String getEdad() {
+    public int getEdad() {
         return edad;
     }
-    public String getPeso() {
+    public double getPeso() {
         return peso;
     }
     public String getGenero() {
@@ -33,7 +33,7 @@ public class Monstruo {
     public String getTipo() {
         return tipo;
     }
-    public String getNivel() {
+    public int getNivel() {
         return nivel;
     }
     @Override
