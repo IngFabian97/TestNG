@@ -19,3 +19,11 @@ Thumbs.db
 
 # Archivos de configuración de TestNG
 test-output/
+
+# Reportes de Allure
+/.allure/
+/allure-report/
+/target/allure-results/
+
+# Logs generados por Log4j
+/src/test/resources/logs/
