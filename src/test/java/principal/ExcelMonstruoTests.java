@@ -36,7 +36,7 @@ public class ExcelMonstruoTests extends BaseTest{
     @Test (groups = {"regression"})
     public void tercerTest(){
         final var tercerMonstruo = monstruos.get(2);
-        Assert.assertEquals(tercerMonstruo.getNivel(),"22", "El nivel del tercer monstruo no es el esperado");
+        Assert.assertEquals(tercerMonstruo.getNivel(),22, "El nivel del tercer monstruo no es el esperado");
     }
 
     @Test(groups = {"regression"})
