@@ -53,6 +53,13 @@ public class ExcelMonstruoTests extends BaseTest{
         
     }
 
+    @Test(dataProvider = data.CustomData.DP_NAME, dataProviderClass = data.CustomData.class, groups = {"regression"})
+    public void quintoTest(Monstruo monstruo){
+        softAssert.assertTrue(monstruo.getEdad() > 0, "La edad del monstruo debe ser mayor que 0");
+        softAssert.assertTrue(monstruo.getNivel() < 1000, "El nivel del monstruo debe ser menor que 1000");
+        softAssert.assertAll();
+    }
+
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
         
